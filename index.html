@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREDIBOX - Box Office Prediction</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>PREDIBOX</h1>
+            <p>Predict the Box Office Success of Movies</p>
+        </header>
+
+        <!-- Prediction Form -->
+        <div class="form-container">
+            <h2>Enter Movie Details</h2>
+            <form id="predictForm">
+                <label for="actors">Actors (comma separated):</label>
+                <input type="text" id="actors" placeholder="e.g., Actor 1, Actor 2">
+
+                <label for="budget">Budget (in million):</label>
+                <input type="number" id="budget" placeholder="e.g., 50">
+
+                <label for="director">Director:</label>
+                <input type="text" id="director" placeholder="e.g., Director Name">
+
+                <label for="productionHouse">Production House:</label>
+                <input type="text" id="productionHouse" placeholder="e.g., XYZ Studios">
+
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" placeholder="e.g., Action, Comedy">
+
+                <button type="submit" id="predictBtn">Predict</button>
+            </form>
+        </div>
+
+        <!-- Result Chart -->
+        <div class="chart-container">
+            <canvas id="resultChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
